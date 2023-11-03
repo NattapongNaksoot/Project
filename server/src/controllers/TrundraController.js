@@ -1,14 +1,14 @@
-const { Aqatic } = require('../models')
+const { Trundra } = require('../models')
 
 module.exports = {
-    //get all user
+    
     async index(req, res) {
         try {
-            const aqatic = await Aqatic.findAll()
-            res.send(aqatic)
+            const trundras = await Trundra.findAll()
+            res.send(trundras)
         } catch (err) {
             res.status(500).send({
-                error: 'the Aqatic information was incorrect'
+                error: 'the Trundra information was incorrect'
             })
         }
     },
@@ -17,11 +17,11 @@ module.exports = {
     // create user
     async create(req, res) {
         try {
-            const aqatic = await Aqatic.create(req.body)
-            res.send(aqatic.toJSON())
+            const trundra = await Trundra.create(req.body)
+            res.send(trundra.toJSON())
         } catch (err) {
             res.status(500).send({
-                error: 'Create Aqatic incorrect'
+                error: 'Create Trundra incorrect'
             })
         }
     },
@@ -29,37 +29,36 @@ module.exports = {
     // edit user, suspend, active
     async put(req, res) {
         try {
-            await Aqatic.update(req.body, {
+            await Trundra.update(req.body, {
                 where: {
-                    id: req.params.aqaticId
+                    id: req.params.trundraId
                 }
             })
             res.send(req.body)
         } catch (err) {
             res.status(500).send({
-                error: 'Update Aqatic incorrect'
+                error: 'Update Trundra incorrect'
             })
         }
     },
 
-    // delete electrolux
     async delete(req, res) {
         try {
-            const aqatic = await Aqatic.findOne({
+            const trundra = await Trundra.findOne({
                 where: {
-                    id: req.params.aqaticId
+                    id: req.params.trundraId
                 }
             })
-            if (!aqatic) {
+            if (!trundra) {
                 return res.status(403).send({
-                    error: 'The Aqatic information was incorrect'
+                    error: 'The Trundra information was incorrect'
                 })
             }
-            await aqatic.destroy()
-            res.send(electrolux)
+            await trundra.destroy()
+            res.send(trundra)
         } catch (err) {
             res.status(500).send({
-                error: 'The Aqatic information was incorrect'
+                error: 'The Trundra information was incorrect'
             })
         }
     },
@@ -67,11 +66,11 @@ module.exports = {
     // get user by id
     async show(req, res) {
         try {
-            const aqatic = await Aqatic.findByPk(req.params.aqaticId)
-            res.send(aqatic)
+            const trundra = await Trundra.findByPk(req.params.trundraId)
+            res.send(trundra)
         } catch (err) {
             res.status(500).send({
-                error: 'The Aqatic information was incorrect'
+                error: 'The Trundra information was incorrect'
             })
         }
     },

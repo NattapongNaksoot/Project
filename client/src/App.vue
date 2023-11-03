@@ -18,7 +18,7 @@ export default {
   margin-left: 20%;
   margin-right: 20%;
   padding: 50px 50px;
-  background-color: #252839;
+  background-color: #393725;
   border-radius: 20px;
 }
 a1{
@@ -139,7 +139,7 @@ form .register-form {
 }
 
 h1 {
-  color: #fde0e0;
+  color: #ffffff;
   font-size: 50px;
   font-weight: bold;
   font-family: monospace;
@@ -159,16 +159,14 @@ h1:hover span:nth-child(2) {
 }
 
 h1:hover span {
-  color: #f3a65e;
-  text-shadow: 0 0 10px #d14a4a,
-    0 0 20px #14c20e,
-    0 0 40px #04f3f3;
+  color: #ffffff;
+  text-shadow:0 0 40px rgb(243, 147, 4);
 }
 button{
-  --glow-color: rgb(217, 176, 255);
-  --glow-spred-color: rgba(191, 123, 255, 0.781);
-  --enhanced-glow-color: rgb(231, 206, 255);
-  --btn-color: rgb(100, 61, 136);
+  --glow-color: rgb(255, 255, 255);
+  --glow-spred-color: rgb(255, 255, 255);
+  --enhanced-glow-color: rgb(255, 255, 255);
+  --btn-color: rgb(66, 48, 29);
   /* border: solid var(--glow-color); */
   color: var(--glow-color);
   font-size: 15px;
