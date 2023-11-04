@@ -11,15 +11,11 @@ export default {
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);  
   margin-top: 60px;
-  margin-left: 20%;
-  margin-right: 20%;
   padding: 50px 50px;
-  background-color: #393725;
-  border-radius: 20px;
+  background-color: #b29470;
+
 }
 a1{
   color: #ffffff;
@@ -50,6 +46,7 @@ button1:hover {
 }
 
 div1 {
+  text-align: center;
   align-items: center;
   min-height: 100vh;
 }
@@ -68,13 +65,12 @@ ul li {
 
 ul li a {
   position: relative;
-  font-size: 2em;
+  font-size: 30px;
   text-decoration: none;
   line-height: 1em;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  color:#ffffff;
 }
 
 ul li a::before {
@@ -146,35 +142,15 @@ h1 {
   cursor: pointer
 }
 
-h1 span {
-  transition: .5s linear
-}
-
-h1:hover span:nth-child(1) {
-  margin-right: 5px
-}
-
-h1:hover span:nth-child(2) {
-  margin-left: 30px
-}
-
-h1:hover span {
-  color: #ffffff;
-  text-shadow:0 0 40px rgb(243, 147, 4);
-}
 button{
-  --glow-color: rgb(255, 255, 255);
-  --glow-spred-color: rgb(255, 255, 255);
-  --enhanced-glow-color: rgb(255, 255, 255);
-  --btn-color: rgb(66, 48, 29);
+  border-radius: 10px;
+  --btn-color: rgb(60, 49, 37);
   /* border: solid var(--glow-color); */
   color: var(--glow-color);
   font-size: 15px;
   font-weight: bold;
   background-color: var(--btn-color);
-  border-radius: 1em;
   outline: none;
-  box-shadow: 0 0 0.5em .1em var(--glow-color), inset 0 0 .25em .1em var(--glow-color);
   transition: all 0.3s;
 }
 </style>
